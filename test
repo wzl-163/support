@@ -1,0 +1,278 @@
+
+wangzilong-yd 12345678Aa cc
+
+
+wangzilong-yd 6789@jkl
+
+http://172.16.124.32:8080/thims/
+
+
+JAVA_INSTALL_PATH=/usr/bin/java
+
+/home/jdk1.8.0_252
+/usr/bin/java
+
+ <Context path="" docBase="/home/zk/tomcat8/tomcat8-file2hbase-test-7090/webapps/writfile2hbase-2.16-RELEASE.jar" debug="0" reloadable="true">
+
+export JAVA_HOME=/home/jdk1.8.0_252
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+scp D:\workspace\tomcat8\tomcat8-data-kafka-fy-6888.zip root@172.16.19.227:/home/zk/tomcat8
+scp D:\workspace\tomcat8\tomcat8-file2hbase-test-7090.zip root@172.16.19.227:/home/zk/tomcat8
+scp D:\workspace2\etl\target\etl-0.1.3.jar root@172.16.19.227:/home/zk/tomcat8
+
+scp D:\workspace\writfile2hbase\target\writfile2hbase-2.16-RELEASE.jar root@172.16.19.227:/home/zk/tomcat8
+
+
+scp D:\workspace\data-kafka-fy\target\data-kafka-fy-3.9.0.war root@172.16.19.228:/home/zk/TAS/webapps
+scp D:\workspace\dealah\target\dealah-2.16-SNAPSHOT.war root@172.16.19.228:/home/zk/TAS/webapps
+scp D:\workspace\data-hbase\target\data-hbase-3.9.0.war root@172.16.19.228:/home/zk/TAS/webapps
+scp D:\workspace\hbase2hbase\target\hbase2hbase-3.9.0.war root@172.16.19.228:/home/zk/TAS/webapps
+scp D:\workspace\importCase\target\importCase-simple-3.9.0.war root@172.16.19.228:/home/zk/TAS/webapps
+
+scp D:\workspace\tomcat8\TAS-v2.8.12.zip root@172.16.19.227:/home/zk/tas
+
+scp D:\workspace\tomcat8\20191001文书导出.zip root@172.16.19.227:/home/zk/txp/test/BJCM/input
+/home/jdk1.8.0_252
+
+
+
+
+python3.10环境变量：在用户变量中添加下面两行（分别添加）
+C:\Users\hyyd\AppData\Local\Programs\Python\Python310\Scripts\  
+C:\Users\hyyd\AppData\Local\Programs\Python\Python310\
+
+
+
+
+上传文件到服务器
+scp xxx.jar username@ip:/workspace 
+例如：scp aaa.jar root@172.0.0.1:/root/java
+下载
+scp root@ip:/root/file
+
+scp root@172.16.19.227:/home/zk/TAS/logs/
+
+然后登陆所在服务器
+ssh username@ip
+例如：ssh root@172.0.0.1(第一次需要输入yes)
+切换到上传jar包所在目录cd /root/java
+然后启动: java -jar aaa.jar --所需参数
+
+
+xpack.userpasswd=elastic:changeme
+es.cluster=HYYD_5_6_SSD_2
+es.ip=192.168.99.65
+es.port=17953
+
+172.23.7.229
+root/202!&hyyD
+
+vi name; a | i esc :wq
+
+/root/store/workspace/删减xml
+
+rm -rf name
+
+
+\\172.23.7.1\oms
+用户名和密码：yuandian/6789@jkl
+
+\\172.23.7.1\22222
+
+172.23.7.1：22222
+
+-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
+
+mvn clean package -DskipTests
+
+mvn clean -package 
+
+mvn package
+
+classpath:/application.yml
+
+xshell
+xFtp
+
+周末将idea mysql等工具破解一下
+
+
+1、
+统计当事人所在行业领域、是否上市公司
+统计当事人涉及的案件数量、是否聘请律师
+
+nohup &
+0
+
+
+maxCaluse
+
+ps -ef|grep xx.jar
+
+		
+学习了ES相关语法，XPATH、正则表达式相关知识、实体识别引擎配置手册。
+项目：阅读了实体识别引擎相关源码，了解到初始化阶段根据不同类型的配置文件，创建不同的XXXManager对象进行初始化，将对应配置文件解析后的数据存入对应Manager
+(配置文件中的数据会加载成对应的对象存入底层相应的Map，比如Writ、Parser、SearchConfigure等);处理阶段通过执行每个parser的相关配置，生成对应的段落以及节点，最终文书处理后的xml。
+阅读了ETL的Manager、Extractor、Transformer、Loader相关源码，了解其执行流程、juc相关应用以及相应的设计模式，可以熟练在其上书写代码。
+阅读了最高法遍历ES入PG库相关源码，学习到了生产者消费者以及相关队列的知识。
+三大平台代码正在阅读中。
+阅读webstack相关代码，寻找金磊需要重构项目的缺点。
+任务：统计当事人相关信息；添加文书关联相关页面以及接口；实现删减xml；统计当事人涉及案由数据；取审判程序下相关数据；统计指定被告人相关数据；聚合统计当事人案由、金额、年度等数据
+统计文书名称、数量、法律法规中名称；统计指定时间内指定公司的起诉方及应诉方相关数据。
+
+从来没有想过web项目还能打包的，但是有要求，就不得不去实现，在网上找了一下，发现挺简单的。
+
+首先是使用MyEclipse将web项目打包，如下图所示。
+
+
+
+右键选中项目，选择export。
+
+然后选择J2EE->WAR File。点击next
+
+接下来制定war包的存放路径，我们将它放在卓面上。
+
+打包完成以后我们将war放到tomcat的webapps目录下。
+
+然后运行tomcat，并输入项目的url就可以了。和正常的web文件同样对待。
+
+ 
+用户名：zk
+ip:192.168.99.97
+密码：0725@hyyd.com
+
+zip -r archive_name.zip filename
+
+
+（一）进入
+
+vim filename
+（二）退出
+s
+:wq  末行模式，保存退出
+:q     末行模式，直接退出
+:q!    末行模式，不保存，强制退出
+
+启动tomcat项目
+1、进入bin目录
+2、关闭tomcat
+./shutdown.sh
+3、查看tomcat是否关闭
+ps -ef|grep java 
+4、杀死进程
+kill -9 xxxx
+5、启动tomcat
+./startup.sh
+
+
+netstat -aon|findstr "8080"
+
+taskkill /pid 4136-t -f
+
+
+1858 166
+
+2022-02-15 16:10:57:930 [pool-4-thread-9] [com.thunisoft.hyyd.exportdsrinfo.service.AbaseService:247]-[ERROR] 批量插入[TAjDsr]，未经处理的异常:
+java.io.FileNotFoundException: C:\java\dsr\test4\t_aj_dsr#c_bh_aj,c_zw,c_sjhm,n_dbrnl,c_zybsjgszd,c_bh,c_gzdwmc,n_zy,n_dwxz,c_bm,c_dbrhj,n_hjszd,c_dbrlxdh,d_csrq,c_dbrzw,d_dbrcsrq,c_zzhm,n_zzmm,c_zcd,c_mc,n_lx,n_gzdwlx,n_jcjzd,n_sf,dt_zhgxsj,n_zzlx,c_zjhm,n_lyxt,n_tshy,n_gzdwxz,c_fddbr,n_dbrzjzl,n_zcdgjdq,dt_rksj,n_gj,c_dbrzjhm,n_dbrxb,n_dbrmz,n_whcd,n_xb,n_mz,c_cym,c_xzz,n_sfzjlx,c_dbrdz,c_dbrxwnl,n_xwnl.csv (文件名、目录名或卷标语法不正确。)
+	
+
+Exception in thread "Thread-41" org.postgresql.util.PSQLException: ERROR: invalid input syntax for type timestamp: "2021年12月10日"
+  在位置：COPY t_aj, line 2, column dt_jasj: "2021年12月10日"
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2270)
+	at org.postgresql.core.v3.QueryExecutorImpl.processCopyResults(QueryExecutorImpl.java:984)
+	at org.postgresql.core.v3.QueryExecutorImpl.writeToCopy(QueryExecutorImpl.java:874)
+	at org.postgresql.core.v3.CopyInImpl.writeToCopy(CopyInImpl.java:51)
+	at org.postgresql.copy.CopyManager.copyIn(CopyManager.java:201)
+	at org.postgresql.copy.CopyManager.copyIn(CopyManager.java:183)
+	at com.thunisoft.hyyd.exportdsrinfo.init.Consumer$Test.run(Consumer.java:168)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+Exception in thread "Thread-39" org.postgresql.util.PSQLException: ERROR: date/time field value out of range: "2021-6-31"
+  在位置：COPY t_aj, line 162307, column dt_jasj: "2021-6-31"
+
+
+
+Exception in thread "Thread-20" org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "t_aj_dsr_pkey"
+  详细：Key (c_bh)=(f7abdfdb382b9eb0c64851652c658fcd) already exists.
+  在位置：COPY t_aj_dsr, line 89
+
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+
+-XX:+PrintGC -XX:+PrintGCDetails -Xms600m -Xmx1000m
+XmlUtil.xmlToDoc(XmlUtil.java:70)
+
+
+-Djava.rmi.server.hostname=127.0.0.1 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=10010 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Xms5000m -Xmx5000m -XX:NewSize=3000m -XX:+PrintGCDetails -Xloggc:D:\test\log\dsr.log
+
+
+
+
+wangzilong-yd@thunisoft.com
+
+
+
+    "extractorParallel": true,
+    "extractorBatchSize": 200,
+    "extractorThreadSize": 1,
+    "extLimit": 0,
+    "transformer": ["30|es2DatabaseTransformer"],
+//    "transformerThreadSize": 30,
+    "transformerQueueSize": 1000,
+    "transformerBatchSize": 100,
+    "loader": "csvFileLoader",
+    "loaderDatasource": "LOCAL",
+    "loaderThreadSize": 30,
+    "loaderQueueSize": 2000,
+    "loaderBatchSize": 70,
+    "esSourceCluster": "es",
+    "esSourceIndex": "legal_insight_lawyer",
+
+http://172.16.6.211:8754/swagger-ui.html#/
+
+
+
+
+
+
+
+select count(*) from t_lawyer;
+530216
+select count(*) from t_ws;
+32088775
+
+
+select count(*) from t_lawyer;
+575200
+select count(*) from t_ws;
+761945
+
+metadata.broker.list=172.16.124.7:9092,172.16.124.8:9092,9:9092
+HBASE_TABLE_COL=table
+
+git@172.16.124.101:bjcm/writfile2hbase.git   newtag 数据通过接口获取，然后入hbase，后面走整套流程
+
+jiaxing_zt    git@172.16.124.101:zk/data-hbase.git
+git@172.16.124.101:zk/dealah.git
+git@172.16.124.101:zk/hbase2hbase.git
+git@172.16.124.101:Legal-Insight/importCase.git
+
+http://172.16.124.101/zk/data-kafka-fy.git   common分支
+现在是有个功能是，表格文书特殊处理，hbase中新加了一个字段，列簇为：m，列为：table,将该值传到kafka中
+
+
+chmod -R +777 *
+一审es
+
+
+
+
+
+172.16.19.227 172.16.19.228 172.16.19.229
+
+
+
+
+nohup java -Xms2048 -Xmx4096 -jar /home/zk/wangzilong/download/package/etl-0.1.3.jar &
